@@ -1,3 +1,9 @@
+0.03  Tue Aug 13 14:14:42 CEST 2002
+	
+	Text::Annotated::Writer now also accepts a list of ordinary
+	strings as input, as long as you do not use the annotation
+	facility when writing.
+
 0.02  Tue Dec  5 16:45:23 MET 2000
 
 	Corrected an error in the documentation to Reader.pm

@@ -1,11 +1,11 @@
 package Text::Annotated::Writer;
-# $Id: Writer.pm,v 1.4 2000/12/05 15:45:11 verhaege Exp $
+# $Id: Writer.pm,v 1.6 2002/08/13 16:17:11 verhaege Exp $
 use strict;
 use vars qw($VERSION);
 use Text::Annotated::Line;
 use Text::Filter;
 use base qw(Text::Filter);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 sub new {
     my $proto = shift;
@@ -42,7 +42,10 @@ sub write {
     my Text::Annotated::Writer $this = shift;
     my $na = $this->{no_annotation};
     while(defined(my $line = $this->readline)) {
-	$this->writeline($na ? $line->stringify : $line->stringify_annotated);
+	$this->writeline($na 
+	    ? "$line" # this will work both on annotated lines and ordinary strings
+	    : $line->stringify_annotated
+	);
     }
 }
 
@@ -117,7 +120,7 @@ L<Text::Annotated::Line> describes annotated lines.
 
 =head1 CVS VERSION
 
-This is CVS version $Revision: 1.4 $, last updated at $Date: 2000/12/05 15:45:11 $.
+This is CVS version $Revision: 1.6 $, last updated at $Date: 2002/08/13 16:17:11 $.
 
 =head1 AUTHOR
 
@@ -125,7 +128,7 @@ Wim Verhaegen E<lt>wim.verhaegen@ieee.orgE<gt>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2000 Wim Verhaegen. All rights reserved. 
+Copyright (c) 2000-2002 Wim Verhaegen. All rights reserved. 
 This program is free software; you can redistribute and/or 
 modify it under the same terms as Perl itself.
 
