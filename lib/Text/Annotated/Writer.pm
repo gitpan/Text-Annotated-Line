@@ -1,11 +1,11 @@
 package Text::Annotated::Writer;
-# $Id: Writer.pm,v 1.3 2000/09/27 16:06:38 verhaege Exp $
+# $Id: Writer.pm,v 1.4 2000/12/05 15:45:11 verhaege Exp $
 use strict;
 use vars qw($VERSION);
 use Text::Annotated::Line;
 use Text::Filter;
 use base qw(Text::Filter);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
     my $proto = shift;
@@ -117,7 +117,7 @@ L<Text::Annotated::Line> describes annotated lines.
 
 =head1 CVS VERSION
 
-This is CVS version $Revision: 1.3 $, last updated at $Date: 2000/09/27 16:06:38 $.
+This is CVS version $Revision: 1.4 $, last updated at $Date: 2000/12/05 15:45:11 $.
 
 =head1 AUTHOR
 

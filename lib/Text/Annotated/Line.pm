@@ -1,12 +1,12 @@
 package Text::Annotated::Line;
-# $Id: Line.pm,v 1.2 2000/09/27 16:06:38 verhaege Exp $
+# $Id: Line.pm,v 1.3 2000/12/05 15:45:10 verhaege Exp $
 use strict;
 use vars qw($VERSION);
 use fields qw(filename linenr content);
 use overload (
     "\"\"" => \&stringify
 );
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
     my $proto = shift;
@@ -124,7 +124,7 @@ L<Text::Annotated::Reader> and L<Text::Annotated::Writer>.
 
 =head1 CVS VERSION
 
-This is CVS version $Revision: 1.2 $, last updated at $Date: 2000/09/27 16:06:38 $.
+This is CVS version $Revision: 1.3 $, last updated at $Date: 2000/12/05 15:45:10 $.
 
 =head1 AUTHOR
 

@@ -1,11 +1,11 @@
 package Text::Annotated::Reader;
-# $Id: Reader.pm,v 1.3 2000/09/27 16:06:38 verhaege Exp $
+# $Id: Reader.pm,v 1.4 2000/12/05 15:45:11 verhaege Exp $
 use strict;
 use vars qw($VERSION);
 use Text::Filter;
 use Text::Annotated::Line;
 use base qw(Text::Filter);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub new {
     my $proto = shift;
@@ -117,7 +117,8 @@ The reader() method builds a Text::Annotated::Reader filter with the supplied ar
 calls read() and finally returns the filter. It is thus possible to combine the whole
 input operation in a single statement like
 
-    my $reader = new Text::Annotated::Reader(input => 'text.in');
+    my $ra_annotated_lines = 
+      Text::Annotated::Reader->reader(input => 'text.in')->{annotated_lines};
 
 =back
 
@@ -129,7 +130,7 @@ L<Text::Annotated::Line> describes annotated lines.
 
 =head1 CVS VERSION
 
-This is CVS version $Revision: 1.3 $, last updated at $Date: 2000/09/27 16:06:38 $.
+This is CVS version $Revision: 1.4 $, last updated at $Date: 2000/12/05 15:45:11 $.
 
 =head1 AUTHOR
 
