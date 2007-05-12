@@ -1,16 +1,16 @@
 package Text::Annotated::Reader;
-# $Id: Reader.pm,v 1.6 2002/08/13 16:17:11 verhaege Exp $
+# $Id: Reader.pm,v 1.7 2007-05-12 18:39:16 wim Exp $
 use strict;
 use vars qw($VERSION);
 use Text::Filter;
 use Text::Annotated::Line;
 use base qw(Text::Filter);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 sub new {
     my $proto = shift;
     my $pkg = ref($proto) || $proto;
-    my $this = $pkg->SUPER::new(@_);
+    my $this = $pkg->SUPER::new(output => [], @_);
     bless $this, $pkg;
 }
 
@@ -130,7 +130,7 @@ L<Text::Annotated::Line> describes annotated lines.
 
 =head1 CVS VERSION
 
-This is CVS version $Revision: 1.6 $, last updated at $Date: 2002/08/13 16:17:11 $.
+This is CVS version $Revision: 1.7 $, last updated at $Date: 2007-05-12 18:39:16 $.
 
 =head1 AUTHOR
 

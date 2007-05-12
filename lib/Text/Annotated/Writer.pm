@@ -1,11 +1,11 @@
 package Text::Annotated::Writer;
-# $Id: Writer.pm,v 1.6 2002/08/13 16:17:11 verhaege Exp $
+# $Id: Writer.pm,v 1.7 2007-05-12 18:39:16 wim Exp $
 use strict;
 use vars qw($VERSION);
 use Text::Annotated::Line;
 use Text::Filter;
 use base qw(Text::Filter);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 sub new {
     my $proto = shift;
@@ -17,7 +17,7 @@ sub new {
     delete $arg{no_annotation};
 
     # construct the filter
-    my $this = $pkg->SUPER::new(%arg);
+    my $this = $pkg->SUPER::new(input => [], %arg);
     bless $this, $pkg;
 
     # add the fields
@@ -120,7 +120,7 @@ L<Text::Annotated::Line> describes annotated lines.
 
 =head1 CVS VERSION
 
-This is CVS version $Revision: 1.6 $, last updated at $Date: 2002/08/13 16:17:11 $.
+This is CVS version $Revision: 1.7 $, last updated at $Date: 2007-05-12 18:39:16 $.
 
 =head1 AUTHOR
 

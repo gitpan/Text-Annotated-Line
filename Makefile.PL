@@ -6,7 +6,7 @@ WriteMakefile(
     'VERSION_FROM' => 'lib/Text/Annotated/Line.pm', # finds $VERSION
     ($] > 5.004) ? (
        ABSTRACT => 'Annotates lines with their source file and line number',
-       AUTHOR   => 'Wim Verhaegen <wim.verhaegen@ieee.org>',
+       AUTHOR   => 'Wim Verhaegen <wimv@cpan.org>',
     ) : (),
     'PREREQ_PM' => { 'Text::Filter' => 1.7 },
     'clean'        => {

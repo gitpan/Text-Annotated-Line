@@ -43,7 +43,7 @@ my $ra_lines = $annotator->{annotated_lines};
 }
 
 # compare the copy with the original file
-ok(0xffff & system('diff t/annotate.copy t/annotate.in') == 0);
+ok((0xffff & system('diff t/annotate.copy t/annotate.in')) == 0);
 END { 
     unlink 't/annotate.copy';
 }
@@ -62,7 +62,7 @@ END {
 }
 
 # compare the annotated output with the expected output
-ok(0xffff & system('diff t/annotate.x t/annotate.an') == 0); # 7
+ok((0xffff & system('diff t/annotate.x t/annotate.an')) == 0); # 7
 END {
     unlink 't/annotate.x';
 }

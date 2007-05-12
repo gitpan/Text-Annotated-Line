@@ -1,3 +1,7 @@
+0.04  Sat May 12 20:36:43 CEST 2007
+
+	Fixes compatibility issues with Text::Filter 1.8
+
 0.03  Tue Aug 13 14:14:42 CEST 2002
 	
 	Text::Annotated::Writer now also accepts a list of ordinary
